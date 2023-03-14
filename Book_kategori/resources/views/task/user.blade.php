@@ -7,7 +7,7 @@
     <div class="p-5">
         <h5 class="mb-3 font-semibold text-gray-700 dark:text-gray-400"> Username : {{ $item->name }}</h5>
         <h5 class="mb-3 font-semibold text-gray-700 dark:text-gray-400">Email : {{ $item->email }}</h5>   
-        <h5 class="mb-3 font-semibold text-gray-700 dark:text-gray-400">role : {{ $item->role}}</h5>   
+        <h5 class="mb-3 font-semibold text-gray-700 dark:text-gray-400">role : {{ $item->role }}</h5>   
     </div>
 </div>
     

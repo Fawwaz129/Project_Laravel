@@ -4,7 +4,7 @@
     <div class="flex">
     <a href="{{url("/tasks/create")}}" class="btn bg-blue-800 px-7 mt-10 rounded-full ml-3 text-white font-semibold py-3">Add</a>
 </div>
-    <div class="container flex-wrap w-full items-center min-h-min gap-3 py-44 flex justify-evenly m-auto"> 
+    <div class="container flex-wrap w-full items-center min-h-min gap-5 py-44 flex justify-evenly m-auto"> 
 @foreach ($data as $item)
 
 <div class="w-[400px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

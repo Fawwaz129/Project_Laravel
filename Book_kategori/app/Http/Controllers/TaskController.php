@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\TaskRequest;
 use Illuminate\Support\Facades\DB;
-use App\Models\Task;
+use App\Http\Requests\TaskRequest;
+use App\Models\task;
 use App\Models\User;
 
+/**
+ * Summary of TaskController
+ */
 class TaskController extends Controller
 {
     public function __construct(){
@@ -44,11 +47,11 @@ class TaskController extends Controller
     public function create(){
         return view('task.create');
     }
-    public function store(Request $request){
+    public function store(TaskRequest $request){
         Task::create([
             'book_name' => $request->book_name,
             'rate_book' => $request->rate_book,
-            'pengarang_book' => $request->pengarang_book
+            'pengarang_book' => $request->pengarang_book,
         ]);
         // return 'Success';
         return redirect('/tasks');
@@ -58,12 +61,15 @@ class TaskController extends Controller
         ->delete();
         return redirect('/tasks');
     }
-    public function update(Request $request, $id){
+
+    public function update(TaskRequest $request, $id){
         $task = Task::find($id);
         $task->update([
             'book_name' => $request->book_name,
             'rate_book' => $request->rate_book,
-            'pengarang_book' => $request->pengarang_book
+            'pengarang_book' => $request->pengarang_book,
+            
+
         ]);
         return redirect('/tasks');
     }

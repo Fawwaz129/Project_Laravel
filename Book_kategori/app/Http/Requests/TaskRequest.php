@@ -34,7 +34,8 @@ class TaskRequest extends FormRequest
             // 'task' => ['required', 'unique:tasks,task'],
             'book_name' => ['required',$rule_task_unique],
             'rate_book' => ['required'],
-            'pengarang_book' => ['required']
+            'pengarang_book' => ['required'],
+
         ];
     }
 
